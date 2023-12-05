@@ -1,0 +1,10 @@
+<resources>
+    <string-array name="classificacao_array">
+        <item>Classificação Livre</item>
+        <item>Não recomendado para menores de 10 anos</item>
+        <item>Não recomendado para menores de 12 anos</item>
+        <item>Não recomendado para menores de 14 anos</item>
+        <item>Não recomendado para menores de 16 anos</item>
+        <item>Não recomendado para menores de 18 anos</item>
+    </string-array>
+</resources>

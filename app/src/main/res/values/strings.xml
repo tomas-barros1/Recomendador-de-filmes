@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="dura_o_m_xima_1_30">Duração Máxima: 1:30</string>
+    <string name="classifica_o_indicativa">Classificação Indicativa:</string>
+    <string name="avalia_o">Avaliação:</string>
+    <string name="data_m_nima_a_partir_de_1900">Data Mínima a partir de 1900:</string>
+    <string name="insira_a_data_m_nima">Insira a Data Mínima</string>
+    <string name="data_m_xima">Data Máxima:</string>
+    <string name="insira_a_data_m_xima">Insira a Data Máxima</string>
+    <string name="finalizar">Finalizar</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    tools:context=".ParametersActivity2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="@string/dura_o_m_xima_1_30"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:max="120"
+        android:progress="90" />
+
+    <TextView
+        android:id="@+id/classificacaoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Classificação indicativa"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/classificacaoSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/classificacaoTextView"
+        android:layout_gravity="center"
+        android:entries="@array/classificacao_array"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/avaliacaoTextView"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classificacaoSpinner"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Avaliação minima"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/avaliacaoTextView"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:numStars="5"
+        android:rating="0.0"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/dataMinimaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/ratingBar"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:text="Filmes lançados a partir de ..."
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/dataMinimaEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataMinimaTextView"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:autofillHints=""
+        android:hint="Insira o ano"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_below="@id/dataMinimaEditText"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="20dp"
+        android:text="@string/finalizar" />
+
+</LinearLayout>
