@@ -25,48 +25,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_weight="1"
-            android:text="Ação" />
+            android:button="@drawable/pistol"
+            android:text="  Ação"
+            android:layout_weight="1" />
 
         <RadioButton
             android:id="@+id/radioBtn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_weight="1"
-            android:text="Aventura" />
+            android:text="  Aventura"
+            android:button="@drawable/compass"
+            android:layout_weight="1" />
 
         <RadioButton
             android:id="@+id/radioBtn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:button="@drawable/heart"
             android:layout_weight="1"
-            android:text="Romance" />
+            android:text="  Romance" />
 
         <RadioButton
             android:id="@+id/radioBtn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_weight="1"
-            android:text="Comédia" />
+            android:button="@drawable/emoticon_excited"
+            android:text="  Comedia"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radioBtn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:button="@drawable/emoticon_cry"
             android:layout_weight="1"
-            android:text="Drama" />
+            android:text="  Drama" />
 
         <RadioButton
             android:id="@+id/radioBtn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:button="@drawable/knife"
             android:layout_weight="1"
-            android:text="Terror" />
+            android:text="  Terror" />
     </RadioGroup>
 
     <Button

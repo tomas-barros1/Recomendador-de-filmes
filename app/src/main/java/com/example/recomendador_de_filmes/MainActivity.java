@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signUp = new Intent(getApplicationContext(), RegisterScreen.class);
+                Intent signUp = new Intent(getApplicationContext(), ParametersActivity1.class);
                 startActivity(signUp);
             }
         });
