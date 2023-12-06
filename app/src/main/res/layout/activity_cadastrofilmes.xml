@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cadastrofilmes">
+    tools:context=".CadastroFilmes">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerBox"
@@ -60,8 +60,7 @@
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextRating"
-            tools:ignore="HardcodedText"
-            android:inputType="TODO" />
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/editTextImdbRating"
@@ -70,7 +69,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/edittext_border"
-            android:hint="Pontuação IMDb"
+            android:hint="@string/pontua_o_imdb"
             android:inputType="numberDecimal"
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -8,4 +8,12 @@
     <string name="data_m_xima">Data Máxima:</string>
     <string name="insira_a_data_m_xima">Insira a Data Máxima</string>
     <string name="finalizar">Finalizar</string>
+    <string name="pontua_o_imdb">Pontuação IMDb</string>
+    <string name="cadastrar_filme">Cadastrar filme</string>
+    <string name="criar_uma_conta">Criar uma conta</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="criar_nova_conta">Criar nova conta</string>
+    <string name="voltar">Voltar</string>
 </resources>
