@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="dura_o_m_xima_1_30">Duração Máxima: 1:30</string>
-    <string name="classifica_o_indicativa">Classificação Indicativa:</string>
     <string name="avalia_o">Avaliação:</string>
     <string name="data_m_nima_a_partir_de_1900">Data Mínima a partir de 1900:</string>
     <string name="insira_a_data_m_nima">Insira a Data Mínima</string>
@@ -16,4 +15,16 @@
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="criar_nova_conta">Criar nova conta</string>
     <string name="voltar">Voltar</string>
+    <string name="cadastrar_um_filme">Cadastrar um filme</string>
+    <string name="t_tulo">Título</string>
+    <string name="g_nero">Gênero</string>
+    <string name="classifica_o_indicativa">Classificação indicativa</string>
+    <string name="imdb">IMDb</string>
+    <string name="ano_de_lan_amento">Ano de lançamento</string>
+    <string name="adicionar_filme">Adicionar filme</string>
+    <string name="recomendador_de_filmes">Recomendador de filmes</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha_login">Senha</string>
+    <string name="entrar_na_conta">Entrar na conta</string>
+    <string name="n_o_possui_uma_conta_cadastre_se_aqui">Não possui uma conta? Cadastre-se aqui</string>
 </resources>

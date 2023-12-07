@@ -95,7 +95,7 @@ public class RegisterScreen extends AppCompatActivity {
         String password = passwordField.getText().toString().trim();
 
         if (confirmPassword.isEmpty()) {
-            confirmPasswordLayout.setError("O campo não pode estar vazio.");
+            confirmPasswordLayout.setError("Necessário informar novamente sua senha.");
             return false;
         } else if (!confirmPassword.equals(password)) {
             confirmPasswordLayout.setError("As senhas não correspondem.");
