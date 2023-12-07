@@ -58,8 +58,6 @@
         android:layout_marginTop="5sp"
         app:startIconDrawable="@drawable/ic_lock_gray"
         app:passwordToggleEnabled="true"
-        app:helperTextEnabled="true"
-        app:helperText="*Informe sua senha novamente"
         app:errorEnabled="true" >
 
         <com.google.android.material.textfield.TextInputEditText

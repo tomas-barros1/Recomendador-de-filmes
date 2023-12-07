@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Recomendadordefilmes"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterMovies"
+            android:exported="false" />
+        <activity
             android:name=".ParametersActivity11"
             android:exported="false" />
         <activity

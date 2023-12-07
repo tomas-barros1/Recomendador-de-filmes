@@ -5,38 +5,65 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.recomendador_de_filmes.R;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.lang.reflect.Parameter;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText login, password;
-    private TextView createAccount;
+
+    TextInputLayout emailLayout, passwordLayout;
+    TextInputEditText emailField, passwordField;
+    Button loginButton;
+    TextView signUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        login = findViewById(R.id.loginField);
-        password = findViewById(R.id.passwordField);
-        createAccount = findViewById(R.id.createAccount);
+        emailLayout = findViewById(R.id.emailLoginLayout);
+        passwordLayout = findViewById(R.id.passwordLoginLayout);
+        emailField = findViewById(R.id.emailLoginField);
+        passwordField = findViewById(R.id.passwordLoginField);
+        loginButton = findViewById(R.id.login);
+        signUp = findViewById(R.id.signUpText);
 
-        //ir para tela de cadastro
-        createAccount.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signUp = new Intent(getApplicationContext(), ParametersActivity1.class);
-                startActivity(signUp);
+                Intent intent = new Intent(MainActivity.this, RegisterScreen.class);
+                startActivity(intent);
             }
         });
+
     }
 
-    //lógica para validar login
+    public boolean validateEmail () {
+        String emailLogin = emailField.getText().toString();
+        if (emailLogin.isEmpty()) {
+            emailLayout.setError("Por favor, informe seu e-mail.");
+            return false;
+        } else {
+           emailLayout.setError(null);
+           return true;
+        }
+    }
 
-
+    public boolean validatePassword () {
+        String passwordLogin = passwordField.getText().toString();
+        if (passwordLogin.isEmpty()) {
+            passwordLayout.setError("Por favor, informe sua senha.");
+            return false;
+        } else {
+            passwordLayout.setError(null);
+            return true;
+        }
+    }
 }
 

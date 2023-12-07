@@ -1,76 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15sp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/loginField"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="108dp"
-        android:hint="Usuário:"
-        android:inputType="text"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="154dp"
-        android:layout_marginBottom="25dp"
-        android:text="Recomendador de filmes"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginField"
-        app:layout_constraintStart_toStartOf="@+id/loginField"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/recomendador_de_filmes"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20sp" >
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailLoginField"
+            android:hint="@string/e_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordLoginField"
+            android:hint="@string/senha_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="24dp"
-        android:text="LOGIN"
-        app:layout_constraintBottom_toTopOf="@+id/createAccount"
-        app:layout_constraintStart_toStartOf="@+id/createAccount"
-        app:layout_constraintTop_toBottomOf="@+id/loginField" />
+        android:text="@string/entrar_na_conta"
+        android:layout_marginBottom="5sp" >
+    </Button>
 
     <TextView
-        android:id="@+id/createAccount"
+        android:id="@+id/signUpText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="249dp"
-        android:onClick="goToSignUp"
-        android:text="CADASTRE-SE"
-        android:textColor="#043BA8"
-        android:textSize="15sp"
+        android:text="@string/n_o_possui_uma_conta_cadastre_se_aqui"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passwordField"
-        android:layout_width="0dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="20dp"
-        android:hint="Senha:"
-        android:inputType="textPassword"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/black">
+    </TextView>
+</LinearLayout>
