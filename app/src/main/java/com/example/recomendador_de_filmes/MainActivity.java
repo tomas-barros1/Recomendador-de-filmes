@@ -1,69 +1,89 @@
 package com.example.recomendador_de_filmes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.recomendador_de_filmes.R;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.recomendador_de_filmes.Util.ConfigFirebase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.lang.reflect.Parameter;
 
 public class MainActivity extends AppCompatActivity {
-
-    TextInputLayout emailLayout, passwordLayout;
-    TextInputEditText emailField, passwordField;
-    Button loginButton;
-    TextView signUp;
+    private EditText loginField, passwordField;
+    private TextView createAccount;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        emailLayout = findViewById(R.id.emailLoginLayout);
-        passwordLayout = findViewById(R.id.passwordLoginLayout);
-        emailField = findViewById(R.id.emailLoginField);
+        loginField = findViewById(R.id.emailLoginField);
         passwordField = findViewById(R.id.passwordLoginField);
-        loginButton = findViewById(R.id.login);
-        signUp = findViewById(R.id.signUpText);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterScreen.class);
-                startActivity(intent);
+        auth = ConfigFirebase.FirebaseAuthentication();
+    }
+
+        public void validateAuth(View view) {
+            String email = loginField.getText().toString();
+            String password = passwordField.getText().toString();
+
+            if(!email.isEmpty()){
+                if(!password.isEmpty()){
+
+                    Users user = new Users();
+
+                    user.setPassword(password);
+                    user.setEmail(email);
+
+                    login(user);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Preencha a senha!", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(getApplicationContext(), "Preencha o email!", Toast.LENGTH_SHORT).show();
             }
-        });
-
-    }
-
-    public boolean validateEmail () {
-        String emailLogin = emailField.getText().toString();
-        if (emailLogin.isEmpty()) {
-            emailLayout.setError("Por favor, informe seu e-mail.");
-            return false;
-        } else {
-           emailLayout.setError(null);
-           return true;
         }
-    }
 
-    public boolean validatePassword () {
-        String passwordLogin = passwordField.getText().toString();
-        if (passwordLogin.isEmpty()) {
-            passwordLayout.setError("Por favor, informe sua senha.");
-            return false;
-        } else {
-            passwordLayout.setError(null);
-            return true;
+        public void login(Users user) {
+            auth.signInWithEmailAndPassword(
+                    user.getEmail(),user.getPassword()
+            ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()) {
+                        goToNextScreen();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Erro ao logar!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
-    }
+
+        //mudar tela depois
+        public void goToNextScreen() {
+            Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
+            startActivity(i);
+        }
+
+        public void goToSingUp() {
+            Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
+            startActivity(i);
+        }
+
 }
 
