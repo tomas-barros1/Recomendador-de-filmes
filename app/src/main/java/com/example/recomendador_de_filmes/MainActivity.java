@@ -11,12 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.recomendador_de_filmes.R;
 import com.example.recomendador_de_filmes.Util.ConfigFirebase;
+import com.example.recomendadordefilmes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
 import java.lang.reflect.Parameter;
 
@@ -68,7 +70,17 @@ public class MainActivity extends AppCompatActivity {
                         goToNextScreen();
                     }
                     else {
-                        Toast.makeText(getApplicationContext(), "Erro ao logar!", Toast.LENGTH_SHORT).show();
+                        String exception = "";
+                        try {
+                            throw task.getException();
+                        } catch (FirebaseAuthInvalidUserException e) {
+                            exception = "Usuário não está cadastrado!";
+                        } catch (FirebaseAuthInvalidCredentialsException e) {
+                            exception = "Email ou senha incorretos!";
+                        } catch (Exception e) {
+                            exception = "Erro ao logar o usuário!" + e.getMessage();
+                        }
+                        Toast.makeText(getApplicationContext(), exception, Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -76,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         //mudar tela depois
         public void goToNextScreen() {
-            Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
+            Intent i = new Intent(getApplicationContext(), ParametersActivity1.class);
             startActivity(i);
         }
 
