@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
 
-        public void goToSingUp() {
+        public void goToSingUp(View view) {
             Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
             startActivity(i);
         }
