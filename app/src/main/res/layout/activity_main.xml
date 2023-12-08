@@ -3,62 +3,99 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="15sp"
+    android:background="#98C2E3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/recomendador_de_filmes"
-        android:textSize="30sp"
+        android:layout_marginTop="-80dp"
+        android:text="Precisando de um uma recomendação? Temos várias para você!"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="20sp" >
+        android:layout_marginBottom="50sp" >
     </TextView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLoginLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp">
+        android:padding="10dp"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailLoginField"
-            android:hint="@string/e_mail"
+        android:background="@drawable/rounded">
+
+        <TextView
+            android:id="@+id/descri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Faça seu login"
+            android:textSize="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLoginLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/descri"
+            app:startIconDrawable="@drawable/ic_alternative_email"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordLoginLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10sp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailLoginField"
+                android:hint="@string/e_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordLoginField"
-            android:hint="@string/senha_login"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLoginLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/emailLoginLayout"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_lock_gray"
+            android:layout_marginBottom="10sp"
+            tools:ignore="NotSibling">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5sp"
-        android:onClick="validateAuth"
-        android:text="@string/entrar_na_conta"></Button>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordLoginField"
+                android:hint="@string/senha_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/signUpText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goToSingUp"
-        android:text="@string/n_o_possui_uma_conta_cadastre_se_aqui"
-        android:textColor="@color/black"
-        android:textStyle="bold"></TextView>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_centerHorizontal="true"
+            android:onClick="validateAuth"
+            android:layout_below="@id/passwordLoginLayout"
+            android:textSize="20sp"
+            android:text="@string/entrar_na_conta"></Button>
+
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:onClick="goToSingUp"
+            android:textSize="20sp"
+            android:layout_below="@id/login"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Não possui conta? Cadastre-se"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+</RelativeLayout>
 </LinearLayout>

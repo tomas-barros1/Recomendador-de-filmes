@@ -30,7 +30,7 @@ public class ParametersActivity1 extends AppCompatActivity {
                     RadioButton radioButton = findViewById(selectedId);
                     String escolha = radioButton.getText().toString();
 
-                    Intent intent = new Intent(ParametersActivity1.this, ParametersActivity2.class);
+                    Intent intent = new Intent(ParametersActivity1.this, RecomendationActivity.class);
                     intent.putExtra("escolha", escolha);
                     startActivity(intent);
                 }

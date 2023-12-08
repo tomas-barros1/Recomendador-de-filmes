@@ -5,80 +5,95 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="15sp"
+    android:background="#98C2E3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterScreen">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/criar_uma_conta"
+        android:text="Faça seu cadastro!"
         android:textSize="35sp"
+        android:layout_marginTop="-60dp"
+        android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_marginBottom="40sp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:id="@+id/emailLayout"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/ic_alternative_email"
-        app:errorEnabled="true">
+        android:padding="10dp"
+        android:background="@drawable/rounded">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailField"
-            android:hint="@string/email"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/emailLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_alternative_email"
+            app:errorEnabled="true">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:id="@+id/passwordLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        app:startIconDrawable="@drawable/ic_lock_gray"
-        app:passwordToggleEnabled="true"
-        app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailField"
+                android:hint="@string/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordField"
-            android:hint="@string/senha"
-            android:inputType="textPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/passwordLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_below="@id/emailLayout"
+            app:startIconDrawable="@drawable/ic_lock_gray"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:id="@+id/confirmPasswordLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        app:startIconDrawable="@drawable/ic_lock_gray"
-        app:passwordToggleEnabled="true"
-        app:errorEnabled="true" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordField"
+                android:hint="@string/senha"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/confirmPasswordField"
-            android:hint="@string/confirmar_senha"
-            android:inputType="textPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/confirmPasswordLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_below="@id/passwordLayout"
+            app:startIconDrawable="@drawable/ic_lock_gray"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true" >
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="250sp"
-        android:layout_height="wrap_content"
-        android:text="@string/criar_nova_conta"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="20sp"
-        android:onClick="validateFields" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordField"
+                android:hint="@string/confirmar_senha"
+                android:inputType="textPassword"
+                android:layout_below="@id/confirmPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:text="@string/criar_nova_conta"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/confirmPasswordLayout"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="20sp"
+            android:onClick="validateFields" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/backButton"

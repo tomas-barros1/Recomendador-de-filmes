@@ -16,9 +16,6 @@
             android:name=".RegisterMovies"
             android:exported="false" />
         <activity
-            android:name=".ParametersActivity11"
-            android:exported="false" />
-        <activity
             android:name=".RecomendationActivity"
             android:exported="false" />
         <activity
