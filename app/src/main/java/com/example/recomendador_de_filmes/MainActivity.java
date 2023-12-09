@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.recomendador_de_filmes.Util.ConfigFirebase;
+import com.example.recomendadordefilmes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -58,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Preencha o email!", Toast.LENGTH_SHORT).show();
         }
     }
-
     public void login(Users user) {
         auth.signInWithEmailAndPassword(
                 user.getEmail(),user.getPassword()
@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     //mudar tela depois
     public void goToNextScreen() {
         Intent i = new Intent(getApplicationContext(), ParametersActivity1.class);
