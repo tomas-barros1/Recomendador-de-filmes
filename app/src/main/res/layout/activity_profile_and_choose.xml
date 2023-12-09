@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#98C2E3"
+    tools:context=".profileAndChooseActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_person_24"
+        style=""
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle"
+        android:contentDescription="ProfilePic" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:width="250dp"
+        android:height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded"
+        android:hint="Nome"/>
+
+    <TextView
+        android:id="@+id/profileEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:width="250dp"
+        android:height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded"
+        android:hint="E-mail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        android:text="Me recomende um(a) ..."/>
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/selectMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="20dp"
+            android:src="@drawable/baseline_movie_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filme"
+            android:layout_below="@id/selectMovie"/>
+
+        <ImageButton
+            android:id="@+id/selectBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="20dp"
+
+            android:layout_toRightOf="@id/selectMovie"
+            android:src="@drawable/baseline_movie_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Livro"
+            android:layout_below="@id/selectBook"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/selectShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="20dp"
+            android:layout_below="@id/selectMovie"
+            android:src="@drawable/baseline_movie_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serie de TV"
+            android:layout_below="@id/selectShow"/>
+
+        <ImageButton
+            android:id="@+id/selectCartoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="20dp"
+
+            android:layout_toRightOf="@id/selectShow"
+            android:layout_below="@id/selectBook"
+            android:src="@drawable/baseline_movie_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animação"
+            android:layout_below="@id/selectCartoon"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

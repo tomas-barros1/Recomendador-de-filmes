@@ -38,64 +38,61 @@ public class MainActivity extends AppCompatActivity {
         auth = ConfigFirebase.FirebaseAuthentication();
     }
 
-        public void validateAuth(View view) {
-            String email = loginField.getText().toString();
-            String password = passwordField.getText().toString();
+    public void validateAuth(View view) {
+        String email = loginField.getText().toString();
+        String password = passwordField.getText().toString();
 
-            if(!email.isEmpty()){
-                if(!password.isEmpty()){
+        if(!email.isEmpty()){
+            if(!password.isEmpty()){
 
-                    Users user = new Users();
+                Users user = new Users();
 
-                    user.setPassword(password);
-                    user.setEmail(email);
+                user.setPassword(password);
+                user.setEmail(email);
 
-                    login(user);
+                login(user);
 
-                } else {
-                    Toast.makeText(getApplicationContext(), "Preencha a senha!", Toast.LENGTH_SHORT).show();
-                }
             } else {
-                Toast.makeText(getApplicationContext(), "Preencha o email!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Preencha a senha!", Toast.LENGTH_SHORT).show();
             }
+        } else {
+            Toast.makeText(getApplicationContext(), "Preencha o email!", Toast.LENGTH_SHORT).show();
         }
-
-        public void login(Users user) {
-            auth.signInWithEmailAndPassword(
-                    user.getEmail(),user.getPassword()
-            ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()) {
-                        goToNextScreen();
-                    }
-                    else {
-                        String exception = "";
-                        try {
-                            throw task.getException();
-                        } catch (FirebaseAuthInvalidUserException e) {
-                            exception = "Usuário não está cadastrado!";
-                        } catch (FirebaseAuthInvalidCredentialsException e) {
-                            exception = "Email ou senha incorretos!";
-                        } catch (Exception e) {
-                            exception = "Erro ao logar o usuário!" + e.getMessage();
-                        }
-                        Toast.makeText(getApplicationContext(), exception, Toast.LENGTH_SHORT).show();
-                    }
+    }
+    public void login(Users user) {
+        auth.signInWithEmailAndPassword(
+                user.getEmail(),user.getPassword()
+        ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()) {
+                    goToNextScreen();
                 }
-            });
-        }
+                else {
+                    String exception = "";
+                    try {
+                        throw task.getException();
+                    } catch (FirebaseAuthInvalidUserException e) {
+                        exception = "Usuário não está cadastrado!";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        exception = "Email ou senha incorretos!";
+                    } catch (Exception e) {
+                        exception = "Erro ao logar o usuário!" + e.getMessage();
+                    }
+                    Toast.makeText(getApplicationContext(), exception, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+    //mudar tela depois
+    public void goToNextScreen() {
+        Intent i = new Intent(getApplicationContext(), ParametersActivity1.class);
+        startActivity(i);
+    }
 
-        //mudar tela depois
-        public void goToNextScreen() {
-            Intent i = new Intent(getApplicationContext(), ParametersActivity1.class);
-            startActivity(i);
-        }
-
-        public void goToSingUp(View view) {
-            Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
-            startActivity(i);
-        }
+    public void goToSingUp(View view) {
+        Intent i = new Intent(getApplicationContext(), RegisterScreen.class);
+        startActivity(i);
+    }
 
 }
-
