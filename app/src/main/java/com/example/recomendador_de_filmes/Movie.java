@@ -8,6 +8,9 @@ public class Movie {
     private String rating;
     private String imdb;
 
+    public Movie() {
+    }
+
     public Movie(String title, String gender, String release, String rating, String imdb) {
         this.title = title;
         this.gender = gender;

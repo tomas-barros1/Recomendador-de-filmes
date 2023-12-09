@@ -5,11 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".RecomendationActivity">
 
     <TextView
-        android:id="@+id/txtRecommendedMovie"
+        android:id="@+id/txtRecommendedTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Título: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtRecommendedGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gênero: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtRecommendedRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ano de Lançamento: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtRecommendedRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Classificação Indicativa: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtRecommendedImdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMDB: "
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar" />
+
 </LinearLayout>
