@@ -2,6 +2,7 @@ package com.example.recomendador_de_filmes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -29,6 +30,8 @@ public class ParametersActivity1 extends AppCompatActivity {
                 if (selectedId != -1) {
                     RadioButton radioButton = findViewById(selectedId);
                     String escolha = radioButton.getText().toString();
+                    Log.d("ParametersActivity1", "Escolha do usuário: " + escolha);
+
 
                     Intent intent = new Intent(ParametersActivity1.this, RecomendationActivity.class);
                     intent.putExtra("escolha", escolha);

@@ -38,7 +38,7 @@
             android:layout_marginEnd="10dp"
             android:layout_gravity="center"
             android:button="@drawable/pistol"
-            android:text="   Ação"
+            android:text="Ação"
             android:layout_weight="1" />
 
         <RadioButton
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="center"
-            android:text="   Aventura"
+            android:text="Aventura"
             android:button="@drawable/compass"
             android:layout_weight="1" />
 
@@ -59,7 +59,7 @@
             android:layout_gravity="center"
             android:button="@drawable/heart"
             android:layout_weight="1"
-            android:text="   Romance" />
+            android:text="Romance" />
 
         <RadioButton
             android:id="@+id/radioBtn4"
@@ -69,7 +69,7 @@
             android:layout_marginEnd="3dp"
             android:layout_gravity="center"
             android:button="@drawable/emoticon_excited"
-            android:text="   Comedia"
+            android:text="Comédia"
             android:layout_weight="1"/>
 
         <RadioButton
@@ -81,7 +81,7 @@
             android:layout_gravity="center"
             android:button="@drawable/alien"
             android:layout_weight="1"
-            android:text="   Sci-Fi" />
+            android:text="Sci-Fi" />
 
         <RadioButton
             android:id="@+id/radioBtn6"
@@ -92,7 +92,7 @@
             android:layout_gravity="center"
             android:button="@drawable/knife"
             android:layout_weight="1"
-            android:text="   Terror" />
+            android:text="Terror" />
     </RadioGroup>
 
     <Button
