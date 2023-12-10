@@ -27,4 +27,20 @@
     <string name="senha_login">Senha</string>
     <string name="entrar_na_conta">Entrar na conta</string>
     <string name="n_o_possui_uma_conta_cadastre_se_aqui">Não possui uma conta? Cadastre-se aqui</string>
+    <string name="fa_a_seu_cadastro">Faça seu cadastro!</string>
+    <string name="nome">Nome</string>
+    <string name="adms">ADMs</string>
+    <string name="fa_a_seu_login">Faça seu login</string>
+    <string name="precisando_de_um_uma_recomenda_o_temos_v_rias_para_voc">Precisando de um uma recomendação? Temos várias para você!</string>
+    <string name="n_o_possui_conta_cadastre_se">Não possui conta? Cadastre-se</string>
+    <string name="clique_em_um_g_nero">Clique em um Gênero!</string>
+    <string name="filme">Filme</string>
+    <string name="livro">Livro</string>
+    <string name="s_rie_de_tv">Série de TV</string>
+    <string name="anima_o">Animação</string>
+    <string name="me_recomende_um_a">Me recomende um(a) ...</string>
+    <string name="email_profile">email</string>
+    <string name="nome_profile">nome</string>
+    <string name="lembrar_da_conta">Lembrar da conta</string>
+    <string name="sair_da_conta">Sair da conta</string>
 </resources>
