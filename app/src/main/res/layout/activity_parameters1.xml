@@ -14,7 +14,7 @@
         android:layout_height="80dp"
         android:gravity="center"
         android:textSize="30sp"
-        android:text="Clique em um Gênero!"/>
+        android:text="@string/clique_em_um_g_nero"/>
 
     <LinearLayout
         android:layout_below="@id/marktitle"

@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class ParametersActivity1 extends AppCompatActivity {
 
@@ -39,5 +40,8 @@ public class ParametersActivity1 extends AppCompatActivity {
                 }
             }
         });
+
+
     }
+
 }

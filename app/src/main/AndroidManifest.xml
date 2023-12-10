@@ -26,6 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".ParametersActivity1"
+            android:parentActivityName=".profileAndChooseActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterScreen"
