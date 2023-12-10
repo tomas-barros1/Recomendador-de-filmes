@@ -58,13 +58,17 @@
         android:layout_gravity="center"
         android:background="@drawable/rounded"
         android:layout_height="wrap_content">
+
         <ImageButton
             android:id="@+id/selectMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:background="#fff"
-            android:layout_margin="20dp"
-            android:src="@drawable/baseline_movie_24"/>
+            android:src="@drawable/baseline_movie_24" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,11 +79,14 @@
             android:id="@+id/selectBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
 
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:layout_toRightOf="@id/selectMovie"
-            android:src="@drawable/baseline_movie_24"/>
+            android:background="#fff"
+            android:src="@drawable/baseline_movie_24" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

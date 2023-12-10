@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.recomendador_de_filmes.Util.ConfigFirebase;
-import com.example.recomendadordefilmes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Login bem sucedido!", Toast.LENGTH_SHORT).show();
                     goToNextScreen();
                 }
                 else {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //mudar tela depois
     public void goToNextScreen() {
-        Intent i = new Intent(getApplicationContext(), ParametersActivity1.class);
+        Intent i = new Intent(getApplicationContext(), profileAndChooseActivity.class);
         startActivity(i);
     }
 
