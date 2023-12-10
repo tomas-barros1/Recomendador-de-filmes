@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void autoLoginToProfile() {
+    public void autoLoginToProfile() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         String savedEmail = sharedPreferences.getString("email", "");
         String savedPassword = sharedPreferences.getString("password", "");
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void loadSavedLoginData() {
+    public void loadSavedLoginData() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         String savedEmail = sharedPreferences.getString("email", "");
         String savedPassword = sharedPreferences.getString("password", "");
@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity {
 
             login(user);
         } else {
-            Toast.makeText(getApplicationContext(), "Preencha ambos os campos!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void saveLoginData(String email, String password) {
+    public void saveLoginData(String email, String password) {
         Log.d("RememberMe", "Saving login data - Email: " + email + ", Password: " + password);
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    private void login(Users user) {
+    public void login(Users user) {
         auth.signInWithEmailAndPassword(
                 user.getEmail(), user.getPassword()
         ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
