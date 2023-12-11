@@ -9,10 +9,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class ParametersActivity1 extends AppCompatActivity {
 
     private RadioGroup radioGroup;
+    Button backToProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,17 @@ public class ParametersActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_parameters1);
 
         radioGroup = findViewById(R.id.radioGroup);
+        backToProfile = findViewById(R.id.backToProfile);
+
+        backToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ParametersActivity1.this, profileAndChooseActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         Button avancar = findViewById(R.id.btnAvancar);
         avancar.setOnClickListener(new View.OnClickListener() {
@@ -32,12 +45,14 @@ public class ParametersActivity1 extends AppCompatActivity {
                     String escolha = radioButton.getText().toString();
                     Log.d("ParametersActivity1", "Escolha do usuário: " + escolha);
 
-
                     Intent intent = new Intent(ParametersActivity1.this, RecomendationActivity.class);
                     intent.putExtra("escolha", escolha);
                     startActivity(intent);
                 }
             }
         });
+
     }
+
+
 }
