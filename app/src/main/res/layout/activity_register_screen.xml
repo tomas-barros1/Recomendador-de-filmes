@@ -62,8 +62,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/emailLayout"
             android:layout_marginTop="5sp"
-            app:errorEnabled="true"
             app:passwordToggleEnabled="true"
+            app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_lock_gray">
 
             <com.google.android.material.textfield.TextInputEditText
