@@ -14,7 +14,7 @@
         android:layout_height="80dp"
         android:gravity="center"
         android:textSize="30sp"
-        android:text="Clique em um Gênero!"/>
+        android:text="@string/clique_em_um_g_nero"/>
 
     <LinearLayout
         android:layout_below="@id/marktitle"
@@ -104,6 +104,17 @@
         android:layout_marginBottom="30dp"
         android:textSize="20sp"
         android:text="Avançar" />
+
+        <Button
+            android:id="@+id/backToProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="top" >
+        </Button>
+
     </LinearLayout>
 
 </RelativeLayout>
