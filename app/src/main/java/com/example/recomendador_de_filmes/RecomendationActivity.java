@@ -49,7 +49,7 @@ public class RecomendationActivity extends AppCompatActivity {
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ParametersActivity1.class);
+                Intent intent = new Intent(getApplicationContext(), profileAndChooseActivity.class);
                 startActivity(intent);
                 finish();
             }
