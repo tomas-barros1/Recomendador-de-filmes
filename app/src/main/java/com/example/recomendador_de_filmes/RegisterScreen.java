@@ -2,6 +2,7 @@ package com.example.recomendador_de_filmes;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,6 +54,7 @@ public class RegisterScreen extends AppCompatActivity {
         confirmPasswordLayout = findViewById(R.id.confirmPasswordLayout);
         button = findViewById(R.id.button);
         backButton = findViewById(R.id.backButton);
+
         fireDataBase = FirebaseDatabase.getInstance();
         databaseReference = fireDataBase.getReference("usuarios");
 
