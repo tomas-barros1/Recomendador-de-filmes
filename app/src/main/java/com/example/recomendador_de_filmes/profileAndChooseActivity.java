@@ -1,7 +1,7 @@
 package com.example.recomendador_de_filmes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,13 +12,21 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class profileAndChooseActivity extends AppCompatActivity {
     private static final String SHARED_PREFS = "SharedPrefs";
+    private DatabaseReference reference;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
     TextView usernameProfile, emailProfile;
     ImageButton goToMovies;
     Button logOut;
+    String currentUserEmail, currentUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +38,6 @@ public class profileAndChooseActivity extends AppCompatActivity {
         goToMovies = findViewById(R.id.selectMovie);
 
         logOut = findViewById(R.id.logOut);
-
-        showUserData();
 
         goToMovies.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,14 +63,29 @@ public class profileAndChooseActivity extends AppCompatActivity {
 
     }
 
-    public void showUserData() {
-        Intent intent = getIntent();
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        String nameUser = intent.getStringExtra("username");
-        String emailUser = intent.getStringExtra("email");
+        currentUserEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        usernameProfile.setText(nameUser);
-        emailProfile.setText(emailUser);
+        reference = database.getReference("usuarios").child(currentUserId);
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String username = snapshot.child("username").getValue(String.class);
+
+                usernameProfile.setText(username);
+                emailProfile.setText(currentUserEmail);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void clearLoginData() {
