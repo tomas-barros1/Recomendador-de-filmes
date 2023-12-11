@@ -8,7 +8,7 @@
     android:background="#98C2E3"
     android:gravity="center"
     android:padding="15sp"
-    tools:context=".RegisterMovies">
+    tools:context=".RegisterMovies" >
 
     <TextView
         android:layout_width="wrap_content"
@@ -106,6 +106,16 @@
         android:layout_marginTop="20dp"
         android:text="@string/adicionar_filme"
         android:textSize="20sp" >
+
+    </Button>
+
+    <Button
+        android:id="@+id/backToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_gravity="top"
+        android:textStyle="bold" >
 
     </Button>
 
