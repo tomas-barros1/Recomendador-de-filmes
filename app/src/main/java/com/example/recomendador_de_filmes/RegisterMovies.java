@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterMovies extends AppCompatActivity {
 
     TextInputEditText titleMovie, genderMovie, releaseMovie, ratingMovie, imdbMovie;
-    Button addMovie;
+    Button addMovie, backToLogin;
     FirebaseDatabase database;
     DatabaseReference reference;
 
@@ -31,6 +31,16 @@ public class RegisterMovies extends AppCompatActivity {
         ratingMovie = findViewById(R.id.ratingField);
         imdbMovie = findViewById(R.id.imdbField);
         addMovie = findViewById(R.id.addMovie);
+        backToLogin = findViewById(R.id.backToLogin);
+
+        backToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterMovies.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         addMovie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +62,9 @@ public class RegisterMovies extends AppCompatActivity {
                     reference.child(title).setValue(movie);
 
                     Toast.makeText(RegisterMovies.this, "Filme adicionado com sucesso!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), ParametersActivity2.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
