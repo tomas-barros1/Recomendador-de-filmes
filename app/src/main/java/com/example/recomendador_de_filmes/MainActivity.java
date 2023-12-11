@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,9 +28,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
+    private ImageButton admImg;
     private EditText loginField, passwordField;
     private TextView admText;
     private FirebaseAuth auth;
+    private CheckBox rememberMe;
     public static final String SHARED_PREFS = "SharedPrefs";
 
     @Override
@@ -40,6 +43,17 @@ public class MainActivity extends AppCompatActivity {
         loginField = findViewById(R.id.emailLoginField);
         passwordField = findViewById(R.id.passwordLoginField);
         admText = findViewById(R.id.admText);
+        admImg = findViewById(R.id.admpage);
+        rememberMe = findViewById(R.id.rememberMe);
+
+        admImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterMovies.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         admText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         loadSavedLoginData();
 
-        CheckBox rememberMeCheckbox = findViewById(R.id.rememberMe);
-        if (rememberMeCheckbox.isChecked()) {
+        if (rememberMe.isChecked()) {
             autoLoginToProfile();
         }
     }
@@ -82,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         if (!savedEmail.isEmpty() && !savedPassword.isEmpty()) {
             loginField.setText(savedEmail);
             passwordField.setText(savedPassword);
-            ((CheckBox) findViewById(R.id.rememberMe)).setChecked(true);
+            rememberMe.setChecked(true);
         }
     }
 
@@ -95,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             user.setPassword(password);
             user.setEmail(email);
 
-            if (((CheckBox) findViewById(R.id.rememberMe)).isChecked()) {
+            if (rememberMe.isChecked()) {
                 saveLoginData(email, password);
             }
 
@@ -121,9 +134,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Login bem sucedido!", Toast.LENGTH_SHORT).show();
-                    String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    getUserDataFromFirebase(userId);
+                    goToNextScreen();
                 } else {
                     String exception = "";
                     try {
@@ -141,29 +152,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void getUserDataFromFirebase(String userId) {
-        DatabaseReference userReference = FirebaseDatabase.getInstance().getReference("usuarios").child(userId);
-
-        userReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    String username = dataSnapshot.child("username").getValue(String.class);
-                    String email = dataSnapshot.child("email").getValue(String.class);
-                    goToNextScreen(username, email);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
-    }
-
-    public void goToNextScreen(String username, String email) {
+    public void goToNextScreen() {
         Intent intent = new Intent(getApplicationContext(), profileAndChooseActivity.class);
-        intent.putExtra("username", username);
-        intent.putExtra("email", email);
         startActivity(intent);
     }
 
@@ -172,4 +162,3 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 }
-
