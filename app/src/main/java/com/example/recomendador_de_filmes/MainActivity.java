@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         admImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterMovies.class);
+                Intent intent = new Intent(MainActivity.this, IntermediaryActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         admText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegisterMovies.class);
+                Intent intent = new Intent(getApplicationContext(), IntermediaryActivity.class);
                 startActivity(intent);
                 finish();
             }

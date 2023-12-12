@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Recomendadordefilmes"
         tools:targetApi="31">
         <activity
+            android:name=".IntermediaryActivity"
+            android:exported="false" />
+        <activity
             android:name=".profileAndChooseActivity"
             android:exported="false" />
         <activity
