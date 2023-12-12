@@ -64,7 +64,8 @@
         android:text="@string/me_recomende_um_a"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:padding="10dp"
