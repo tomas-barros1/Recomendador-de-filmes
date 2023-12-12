@@ -9,7 +9,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class ParametersActivity1 extends AppCompatActivity {
 
@@ -33,26 +32,20 @@ public class ParametersActivity1 extends AppCompatActivity {
             }
         });
 
-
-        Button avancar = findViewById(R.id.btnAvancar);
-        avancar.setOnClickListener(new View.OnClickListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                int selectedId = radioGroup.getCheckedRadioButtonId();
-
-                if (selectedId != -1) {
-                    RadioButton radioButton = findViewById(selectedId);
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = findViewById(checkedId);
+                if (radioButton != null) {
                     String escolha = radioButton.getText().toString();
                     Log.d("ParametersActivity1", "Escolha do usuário: " + escolha);
 
                     Intent intent = new Intent(ParametersActivity1.this, RecomendationActivity.class);
                     intent.putExtra("escolha", escolha);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
-
     }
-
-
 }

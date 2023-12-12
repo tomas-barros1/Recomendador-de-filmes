@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_person_24"
-        style=""
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#fff"
         android:background="@drawable/circle"
         android:contentDescription="ProfilePic" />
 
@@ -48,11 +48,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:backgroundTint="#5A5A5A"
         android:layout_marginTop="10sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textSize="25sp"
         android:layout_marginBottom="10dp"
@@ -74,66 +75,44 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:background="#fff"
-            android:src="@drawable/baseline_movie_24" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/filme"
-            android:layout_below="@id/selectMovie"/>
+            android:src="@drawable/movie_open" />
 
         <ImageButton
             android:id="@+id/selectBook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:layout_toEndOf="@id/selectMovie"
             android:background="#fff"
-            android:src="@drawable/baseline_movie_24" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/livro"
-            android:layout_below="@id/selectBook"
-            android:layout_centerHorizontal="true"/>
+            android:src="@drawable/lock" />
 
         <ImageButton
             android:id="@+id/selectShow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            android:layout_margin="20dp"
             android:layout_below="@id/selectMovie"
-            android:src="@drawable/baseline_movie_24"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/s_rie_de_tv"
-            android:layout_below="@id/selectShow"/>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#fff"
+            android:src="@drawable/lock" />
 
         <ImageButton
             android:id="@+id/selectCartoon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/selectBook"
-
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:layout_toEndOf="@id/selectShow"
             android:background="#fff"
-            android:src="@drawable/baseline_movie_24" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/anima_o"
-            android:layout_below="@id/selectCartoon"
-            android:layout_centerHorizontal="true"/>
-
+            android:src="@drawable/lock" />
 
     </RelativeLayout>
 

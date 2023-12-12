@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="15sp"
     android:background="#98C2E3"
     android:layout_width="match_parent"
@@ -14,31 +13,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fa_a_seu_cadastro"
-        android:textSize="35sp"
-        android:layout_marginTop="-60dp"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:layout_marginBottom="40sp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usernameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:errorEnabled="true" >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/usernameField"
-            android:hint="@string/nome"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginBottom="30sp"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="396dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded"
         android:padding="10dp">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/face_man">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameField"
+                android:hint="@string/nome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"
@@ -46,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true"
+            android:layout_below="@id/usernameLayout"
             app:startIconDrawable="@drawable/ic_alternative_email">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -96,28 +96,28 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="250sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/confirmPasswordLayout"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="20sp"
+            android:backgroundTint="#6690B1"
             android:onClick="validateFields"
             android:text="@string/criar_nova_conta"
             android:textColor="@color/white"
             android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voltar"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/button"
+            android:backgroundTint="#6690B1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginTop="5sp"
-        android:text="@string/voltar"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:icon="@drawable/ic_arrow_back" />
 
 </LinearLayout>

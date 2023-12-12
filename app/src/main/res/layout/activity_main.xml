@@ -12,9 +12,9 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-30dp"
         android:layout_gravity="center"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo_lamp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -79,17 +79,18 @@
             android:id="@+id/rememberMe"
             android:layout_width="170sp"
             android:layout_height="40sp"
+            android:layout_marginTop="-10dp"
             android:text="@string/lembrar_da_conta"
-            android:layout_marginTop="160sp"/>
+            android:layout_below="@id/passwordLoginLayout"/>
 
         <Button
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
             android:layout_centerHorizontal="true"
             android:onClick="validateAuth"
-            android:layout_below="@id/passwordLoginLayout"
+            android:backgroundTint="#6690B1"
+            android:layout_below="@id/rememberMe"
             android:textSize="20sp"
             android:text="@string/entrar_na_conta">
 
@@ -115,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     <ImageButton
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/admpage"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -126,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/adms"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/admpage"/>
