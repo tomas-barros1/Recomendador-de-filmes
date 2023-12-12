@@ -6,41 +6,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#98C2E3"
-    android:gravity="center"
     android:padding="15sp"
     tools:context=".RegisterMovies" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastro de Filmes"
+        android:text="Cadastro de Filmes!"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginTop="-60dp"
-        android:layout_marginBottom="30sp" >
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20sp" >
     </TextView>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded"
         android:padding="10dp" >
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/titleLayout"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="7sp" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/titleField"
                 android:hint="@string/t_tulo"
-                android:layout_width="350sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:id="@+id/genderLayout"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleLayout"
@@ -50,12 +50,12 @@
                 android:id="@+id/genderField"
                 android:hint="@string/g_nero"
                 android:inputType="text"
-                android:layout_width="350sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:id="@+id/releaseLayout"
             android:layout_height="wrap_content"
             android:layout_below="@id/genderLayout"
@@ -65,13 +65,13 @@
                 android:id="@+id/releaseField"
                 android:hint="@string/ano_de_lan_amento"
                 android:inputType="date"
-                android:layout_width="350sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ratingLayout"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_below="@id/releaseLayout"
             android:layout_height="wrap_content"
             android:layout_marginBottom="7sp" >
@@ -79,14 +79,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ratingField"
                 android:hint="@string/classifica_o_indicativa"
-                android:inputType="number"
-                android:layout_width="350sp"
+                android:inputType="text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/imdbLayout"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ratingLayout" >
 
@@ -94,29 +94,31 @@
                 android:id="@+id/imdbField"
                 android:hint="@string/imdb"
                 android:inputType="numberDecimal"
-                android:layout_width="350sp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/addMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/adicionar_filme"
+            android:backgroundTint="#6690B1"
+            android:layout_below="@id/imdbLayout"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/backToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_below="@+id/addMovie"
+            android:backgroundTint="#6690B1"
+            android:textStyle="bold" >
+        </Button>
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/addMovie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/adicionar_filme"
-        android:textSize="20sp" >
-
-    </Button>
-
-    <Button
-        android:id="@+id/backToLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voltar"
-        android:layout_gravity="top"
-        android:textStyle="bold" >
-
-    </Button>
 
 </LinearLayout>
