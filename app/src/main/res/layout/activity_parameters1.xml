@@ -157,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="10dp"
-                    android:button="@drawable/knife"
+                    android:button="@drawable/liquid_spot"
                     android:paddingLeft="20dp"
                     android:text="Suspense"
                     android:textColor="#000000"
