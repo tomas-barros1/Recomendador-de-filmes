@@ -12,12 +12,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_a_seu_cadastro"
-        android:textSize="30sp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textStyle="bold"
-        android:layout_marginBottom="30sp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30sp"
+        android:text="@string/fa_a_seu_cadastro"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -34,9 +36,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/usernameField"
-                android:hint="@string/nome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:hint="@string/nome"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +56,9 @@
                 android:id="@+id/emailField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email" />
+                android:hint="@string/email"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -71,7 +77,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/senha"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -91,7 +99,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/confirmPasswordLayout"
                 android:hint="@string/confirmar_senha"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

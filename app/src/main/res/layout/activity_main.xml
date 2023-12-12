@@ -20,12 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-80dp"
-        android:text="@string/precisando_de_um_uma_recomenda_o_temos_v_rias_para_voc"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="50sp"
         android:gravity="center"
-        android:layout_marginBottom="50sp" >
-    </TextView>
+        android:text="@string/precisando_de_um_uma_recomenda_o_temos_v_rias_para_voc"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="@string/fa_a_seu_login"
-            android:textSize="20dp"/>
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLoginLayout"
@@ -52,9 +53,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailLoginField"
-                android:hint="@string/e_mail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/e_mail"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -69,30 +72,37 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordLoginField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/senha_login"
                 android:inputType="textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:textColorLink="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
             android:id="@+id/rememberMe"
             android:layout_width="170sp"
             android:layout_height="40sp"
+            android:layout_below="@id/passwordLoginLayout"
             android:layout_marginTop="-10dp"
             android:text="@string/lembrar_da_conta"
-            android:layout_below="@id/passwordLoginLayout"/>
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
 
         <Button
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:onClick="validateAuth"
-            android:backgroundTint="#6690B1"
             android:layout_below="@id/rememberMe"
-            android:textSize="20sp"
-            android:text="@string/entrar_na_conta">
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#6690B1"
+            android:onClick="validateAuth"
+            android:text="@string/entrar_na_conta"
+            android:textColor="@color/white"
+            android:textSize="20sp">
 
         </Button>
 
@@ -100,14 +110,15 @@
             android:id="@+id/signUpText"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:onClick="goToSingUp"
-            android:textSize="20sp"
             android:layout_below="@id/login"
-            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:onClick="goToSingUp"
             android:text="@string/n_o_possui_conta_cadastre_se"
-            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
             android:textStyle="bold">
 
         </TextView>
@@ -122,15 +133,17 @@
         android:layout_height="40dp"
         android:background="@drawable/rounded"
         android:src="@drawable/ic_lock_gray"/>
-    <TextView
-        android:id="@+id/admText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/adms"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/admpage"/>
+
+        <TextView
+            android:id="@+id/admText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/admpage"
+            android:text="@string/adms"
+            android:textColor="#000000"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </LinearLayout>

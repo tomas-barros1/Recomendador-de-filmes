@@ -12,13 +12,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastro de Filmes!"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20sp" >
-    </TextView>
+        android:layout_marginBottom="20sp"
+        android:text="Cadastro de Filmes!"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"></TextView>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,9 +34,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/titleField"
-                android:hint="@string/t_tulo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/t_tulo"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -48,10 +50,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/genderField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/g_nero"
                 android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -63,10 +67,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/releaseField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/ano_de_lan_amento"
                 android:inputType="date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,10 +84,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ratingField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/classifica_o_indicativa"
                 android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,33 +100,36 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/imdbField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/imdb"
                 android:inputType="numberDecimal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/addMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/adicionar_filme"
-            android:backgroundTint="#6690B1"
             android:layout_below="@id/imdbLayout"
             android:layout_centerHorizontal="true"
-            android:textSize="20sp" >
-        </Button>
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#6690B1"
+            android:text="@string/adicionar_filme"
+            android:textColor="@color/white"
+            android:textSize="20sp"></Button>
 
         <Button
             android:id="@+id/backToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Voltar"
             android:layout_below="@+id/addMovie"
             android:backgroundTint="#6690B1"
-            android:textStyle="bold" >
-        </Button>
+            android:text="Voltar"
+            android:textColor="@color/white"
+            android:textStyle="bold"></Button>
     </RelativeLayout>
 
 </LinearLayout>

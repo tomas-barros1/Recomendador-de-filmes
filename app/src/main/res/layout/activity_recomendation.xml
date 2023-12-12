@@ -13,73 +13,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Nossa recomendação!"
-        android:textSize="30sp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:text="Nossa recomendação!"
+        android:textColor="#000000"
+        android:textSize="30sp"
         android:textStyle="bold" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded"
         android:padding="10dp">
+
         <TextView
             android:id="@+id/txtRecommendedTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título: "
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:text="Título: "
+            android:textColor="#000000"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/txtRecommendedGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gênero: "
-            android:layout_marginLeft="10dp"
             android:layout_below="@id/txtRecommendedTitle"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:text="Gênero: "
+            android:textColor="#000000"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/txtRecommendedRelease"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ano de Lançamento: "
-            android:layout_marginLeft="10dp"
             android:layout_below="@id/txtRecommendedGender"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:text="Ano de Lançamento: "
+            android:textColor="#000000"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/txtRecommendedRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classificação Indicativa: "
             android:layout_below="@id/txtRecommendedRelease"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Classificação Indicativa: "
+            android:textColor="#000000"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/txtRecommendedImdb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IMDB: "
-            android:layout_marginLeft="10dp"
             android:layout_below="@id/txtRecommendedRating"
+            android:layout_marginLeft="10dp"
+            android:text="IMDB: "
+            android:textColor="#000000"
             android:textSize="22sp" />
 
         <Button
             android:id="@+id/returnButton"
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txtRecommendedImdb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#6690B1"
             android:text="Voltar"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/txtRecommendedImdb"/>
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 

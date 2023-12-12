@@ -17,8 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:gravity="center"
-            android:textSize="30sp"
-            android:text="@string/clique_em_um_g_nero"/>
+            android:text="@string/clique_em_um_g_nero"
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_below="@id/marktitle"
@@ -38,110 +39,120 @@
                     android:id="@+id/radioBtn1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="10dp"
-                    android:paddingLeft="20dp"
                     android:button="@drawable/pistol"
-                    android:text="Ação" />
+                    android:paddingLeft="20dp"
+                    android:text="Ação"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Aventura"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="10dp"
+                    android:button="@drawable/compass"
                     android:paddingLeft="20dp"
-                    android:button="@drawable/compass"/>
+                    android:text="Aventura"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:button="@drawable/heart"
                     android:layout_marginBottom="10dp"
+                    android:button="@drawable/heart"
                     android:paddingLeft="20dp"
-                    android:text="Romance" />
+                    android:text="Romance"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
                     android:button="@drawable/emoticon_excited"
-                    android:text="Comédia"/>
+                    android:paddingLeft="20dp"
+                    android:text="Comédia"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
-                    android:button="@drawable/alien"
                     android:layout_marginBottom="5dp"
-                    android:text="Sci-Fi" />
+                    android:button="@drawable/alien"
+                    android:paddingLeft="20dp"
+                    android:text="Sci-Fi"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
-                    android:button="@drawable/knife"
                     android:layout_marginBottom="10dp"
-                    android:text="Terror" />
+                    android:button="@drawable/knife"
+                    android:paddingLeft="20dp"
+                    android:text="Terror"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
-                    android:button="@drawable/unicorn"
                     android:layout_marginBottom="10dp"
-                    android:text="Fantasia" />
+                    android:button="@drawable/unicorn"
+                    android:paddingLeft="20dp"
+                    android:text="Fantasia"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
-                    android:button="@drawable/basketball"
                     android:layout_marginBottom="10dp"
-                    android:text="Esporte" />
+                    android:button="@drawable/basketball"
+                    android:paddingLeft="20dp"
+                    android:text="Esporte"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:paddingLeft="20dp"
                     android:layout_marginLeft="15dp"
-                    android:button="@drawable/emoticon_cry"
                     android:layout_marginBottom="10dp"
-                    android:text="Drama" />
+                    android:button="@drawable/emoticon_cry"
+                    android:paddingLeft="20dp"
+                    android:text="Drama"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioBtn10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:layout_marginLeft="15dp"
-                    android:paddingLeft="20dp"
-                    android:button="@drawable/knife"
                     android:layout_marginBottom="10dp"
-                    android:text="Suspense" />
+                    android:button="@drawable/knife"
+                    android:paddingLeft="20dp"
+                    android:text="Suspense"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
             </RadioGroup>
 
             <Button
